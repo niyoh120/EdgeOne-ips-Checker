@@ -6,7 +6,7 @@ on:
     branches: [ main ]
     paths: [ 'scan_eopages_ips.py' ]
   schedule:
-    - cron: '45 1 */7 * *'
+    - cron: '45 9 */7 * *'
 
 jobs:
   scan-ips:
