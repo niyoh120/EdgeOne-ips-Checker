@@ -6,7 +6,7 @@ on:
     branches: [ main ]
     paths: [ 'scan_freenew.py' ]
   schedule:
-    - cron: '45 1 */7 * *'
+    - cron: '45 6 */7 * *'
 
 jobs:
   scan-ips:
@@ -46,7 +46,6 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git pull --rebase origin main
         git add available_eofreenew_ips.txt
         git commit -m "📈 $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
         git push
